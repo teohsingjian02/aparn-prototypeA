@@ -10,13 +10,13 @@
 <link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/newsreader-normal-latin-3.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/a.css">
-<script>document.documentElement.classList.add("js")</script>
+<script>(function () { var r = document.documentElement, m = null; r.classList.add("js"); try { m = localStorage.getItem("aparn-motion"); } catch (e) {} var q = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; if (m === "on" || (m !== "off" && !q)) r.classList.add("anim"); if (m === "off") r.classList.add("motion-off"); })();</script>
 <script defer src="../../assets/js/aparn.js"></script>
+<script defer src="../../assets/js/motion.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="proto">Prototype for discussion: a redesign proposal, not the official APARN website. <span class="proto-concept">Concept A: Editorial Gallery.</span> <a href="../../compare/">Compare all three concepts</a></div>
-<header class="masthead">
+<header class="masthead" data-top>
   <div class="masthead-inner">
     <a class="wordmark" href="../../"><svg class="wordmark-isles" viewBox="0 0 64 22" aria-hidden="true" focusable="false"><line x1="0" y1="15.84" x2="64" y2="15.84"/><path d="M6.2 15.84 Q 12.6 2.4 27.2 15.84 Z"/></svg><span class="wordmark-short">APARN</span><span class="wordmark-full">Asia Pacific Artistic Research Network</span></a>
     <nav class="site-nav" aria-label="Main">
@@ -28,6 +28,7 @@
     </nav>
     <a class="btn btn--join masthead-join" href="https://groups.google.com/g/ap-arn" rel="noopener" target="_blank" data-join>Join APARN<span class="vh"> (opens Google Groups in a new tab)</span></a>
   </div>
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
 </header>
 <main id="main" tabindex="-1">
 
@@ -40,8 +41,8 @@
   <span class="plate-place">Cyberjaya</span>
 </div>
   <div>
-    <p class="kicker"><a href="../../archive/">Archive</a> · APARN Conference</p>
-    <h1 class="h1">Art as Research: Methods for Synthetic Reasoning</h1>
+    <p class="kicker"><a href="../../archive/">Archive</a></p>
+    <h1 class="h1"><span class="w"><span class="wi" style="--d:0">Art</span></span> <span class="w"><span class="wi" style="--d:1">as</span></span> <span class="w"><span class="wi" style="--d:2">Research:</span></span> <span class="w"><span class="wi" style="--d:3">Methods</span></span> <span class="w"><span class="wi" style="--d:4">for</span></span> <span class="w"><span class="wi" style="--d:5">Synthetic</span></span> <span class="w"><span class="wi" style="--d:6">Reasoning</span></span></h1>
     <p class="event-meta"><span class="status status--held">Held</span> <span>12–13 June 2024</span> <span>Cyberjaya, Malaysia</span></p>
     <p class="lead">How do we make order and meaning from the world? Two days in Cyberjaya explored art as a way of reasoning: how artworks, as philosophical simulations, produce new knowledge, and how art and technology together can imagine liveable futures.</p>
   </div>
@@ -96,12 +97,15 @@
       <h2 class="colophon-h">About this prototype</h2>
       <p class="colophon-small">A redesign proposal for discussion. Content checked 24 November 2026. Proposals are marked as such.</p>
       <ul class="colophon-list">
+        <li><a href="../../compare/">Compare all three concepts</a></li>
         <li><a href="../../sources/">Sources, credits and open questions</a></li>
         <li><a href="https://teohsingjian02.github.io/aparn-prototypeB/">See Concept B: Living Network</a></li>
         <li><a href="https://teohsingjian02.github.io/aparn-prototypeC/">See Concept C: Clear Signal</a></li>
       </ul>
+      <button type="button" class="motion-sw" data-motion-toggle aria-pressed="false" hidden><span>Animations</span><span class="motion-sw-k" aria-hidden="true"></span></button>
     </div>
   </div>
 </footer>
+<a class="totop" href="#main" data-totop><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 16V4M5 9l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="vh">Back to top</span></a>
 </body>
 </html>

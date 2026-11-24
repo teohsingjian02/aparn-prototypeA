@@ -10,13 +10,13 @@
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/newsreader-normal-latin-3.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/a.css">
-<script>document.documentElement.classList.add("js")</script>
+<script>(function () { var r = document.documentElement, m = null; r.classList.add("js"); try { m = localStorage.getItem("aparn-motion"); } catch (e) {} var q = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; if (m === "on" || (m !== "off" && !q)) r.classList.add("anim"); if (m === "off") r.classList.add("motion-off"); })();</script>
 <script defer src="assets/js/aparn.js"></script>
+<script defer src="assets/js/motion.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="proto">Prototype for discussion: a redesign proposal, not the official APARN website. <span class="proto-concept">Concept A: Editorial Gallery.</span> <a href="compare/">Compare all three concepts</a></div>
-<header class="masthead">
+<header class="masthead" data-top>
   <div class="masthead-inner">
     <a class="wordmark" href="./"><svg class="wordmark-isles" viewBox="0 0 64 22" aria-hidden="true" focusable="false"><line x1="0" y1="15.84" x2="64" y2="15.84"/><path d="M6.2 15.84 Q 12.6 2.4 27.2 15.84 Z"/></svg><span class="wordmark-short">APARN</span><span class="wordmark-full">Asia Pacific Artistic Research Network</span></a>
     <nav class="site-nav" aria-label="Main">
@@ -28,137 +28,39 @@
     </nav>
     <a class="btn btn--join masthead-join" href="https://groups.google.com/g/ap-arn" rel="noopener" target="_blank" data-join>Join APARN<span class="vh"> (opens Google Groups in a new tab)</span></a>
   </div>
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
 </header>
 <main id="main" tabindex="-1">
 
-<section class="opening">
-  <div class="opening-text">
-    <h1 class="opening-h">Artistic research, in conversation across the Asia Pacific.</h1>
-    <p class="opening-lede">APARN connects artists and researchers working in, from and with the Asia Pacific. We meet every year in a different place, gather at the conference of the Society for Artistic Research, and publish together, so the conversation keeps going between meetings.</p>
-    <div class="opening-actions"><a class="btn btn--join btn--large" href="https://groups.google.com/g/ap-arn" rel="noopener" target="_blank" data-join>Join APARN<span class="vh"> (opens Google Groups in a new tab)</span></a><a class="arrow" href="network/">Explore the network</a></div>
-    <p class="opening-where">Opens Google Groups. You join there.</p>
+<section class="hero" id="top" aria-labelledby="h-hero"><div class="wrap hero-in">
+  <div class="hero-t">
+    <h1 class="hero-h" id="h-hero"><span class="w"><span class="wi" style="--d:0">Artistic</span></span> <span class="w"><span class="wi" style="--d:1">research,</span></span> <span class="w"><span class="wi" style="--d:2">in</span></span> <span class="w"><span class="wi grad-t" style="--d:3">conversation</span></span> <span class="w"><span class="wi" style="--d:4">across</span></span> <span class="w"><span class="wi" style="--d:5">the</span></span> <span class="w"><span class="wi" style="--d:6">Asia</span></span> <span class="w"><span class="wi" style="--d:7">Pacific.</span></span></h1>
+    <p class="hero-lede">Artists and researchers across the Asia Pacific, meeting every year, sharing work and publishing together.</p>
+    <div class="hero-act"><a class="btn btn--join btn--lg" href="https://groups.google.com/g/ap-arn" rel="noopener" target="_blank" data-join>Join APARN<span class="vh"> (opens Google Groups in a new tab)</span></a><a class="btn btn--soft btn--lg" href="#network">Explore <svg class="ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    <p class="note">Opens Google Groups. You join there.</p>
   </div>
-  <figure class="opening-fig fig"><img class="" src="assets/img/eshraghi-reculnaissance-2020-1200.webp" srcset="assets/img/eshraghi-reculnaissance-2020-720.webp 720w, assets/img/eshraghi-reculnaissance-2020-1200.webp 1200w, assets/img/eshraghi-reculnaissance-2020-2000.webp 2000w" sizes="(min-width: 64em) 46vw, 100vw" width="2000" height="1334" alt="Neon words glow across a dark wall in Léuli Eshrāghi’s installation re(cul)naissance." fetchpriority="high" decoding="async"><figcaption><span class="cap">Léuli Eshrāghi, re(cul)naissance, 2020. Installation view, 22nd Biennale of Sydney, Cockatoo Island. Commissioned by the Biennale of Sydney.</span> <span class="credit">Courtesy the artist. Photograph: Jessica Maurer.</span></figcaption></figure>
-</section>
-<aside class="next-ribbon" aria-label="Coming up">
-  <p><span class="next-k">Next conference</span> <strong>APARN2027</strong> at RMIT University Vietnam. <span class="status status--tbc">Details to be confirmed</span></p>
-  <p><span class="next-k">Next SAR Conference</span> <strong>SAR 2027</strong>, Bratislava, 21–23 April 2027. <a class="" href="https://sar2027.eu/sk" rel="noopener" target="_blank">sar2027.eu<span class="ext-mark" aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a></p>
-</aside>
-
-<section class="sec sec--discover" aria-labelledby="h-discover">
-  
-  <div class="split">
-    <h2 id="h-discover" class="h2">A network for people who make knowledge through art.</h2>
-    <div class="split-body">
-      <p class="lead">APARN is a network for artists, researchers, educators, curators and practitioners who work through art to make knowledge. It brings together people working in, from and with the Asia Pacific, whether they are based in a university, a collective or an independent practice.</p>
-      <ol class="purposes"><li>Map artistic research initiatives and activities across the Asia Pacific.</li><li>Make practical collaboration easier between people and institutions in the region.</li><li>Understand the local cultural dynamics that shape artistic research here.</li></ol>
-      <div class="note-sar"><p class="note-sar-k">Part of SAR</p><p>APARN is part of the Society for Artistic Research: it is one of SAR’s Special Interest Groups. SAR is a non-profit, member-led international society for artistic research, established in 2010 in Bern.</p></div>
-      <a class="arrow" href="about/">About APARN, its Director and convenors</a>
-    </div>
+  <figure class="hero-art"><img class="" src="assets/img/eshraghi-reculnaissance-2020-1200.webp" srcset="assets/img/eshraghi-reculnaissance-2020-720.webp 720w, assets/img/eshraghi-reculnaissance-2020-1200.webp 1200w, assets/img/eshraghi-reculnaissance-2020-2000.webp 2000w" sizes="(min-width: 64em) 44vw, 100vw" width="2000" height="1334" alt="Neon words glow across a dark wall in Léuli Eshrāghi’s installation re(cul)naissance." fetchpriority="high" decoding="async"><figcaption>Léuli Eshrāghi, re(cul)naissance, 2020, 22nd Biennale of Sydney. Courtesy the artist. Photo: Jessica Maurer.</figcaption></figure>
+</div></section>
+<section class="hsec" id="network" aria-labelledby="h-network"><div class="wrap">
+  <h2 class="hh2" id="h-network" data-rise>Across the network</h2>
+  <dl class="hfigs"><div data-rise><dt><span aria-hidden="true" data-count="300" data-suffix="+">300+</span><span class="vh">300+</span></dt><dd>members in the APARN Google Group<span>November 2026</span></dd></div><div data-rise><dt><span aria-hidden="true" data-count="150" data-suffix="+">150+</span><span class="vh">150+</span></dt><dd>presentations at APARN2025 in Bangkok<span>July 2025</span></dd></div><div data-rise><dt><span aria-hidden="true" data-count="22" data-suffix="">22</span><span class="vh">22</span></dt><dd>countries represented at APARN2025<span>July 2025</span></dd></div><div data-rise><dt><span aria-hidden="true" data-count="8" data-suffix="">8</span><span class="vh">8</span></dt><dd>annual meetings held since 2019<span>2019–2026</span></dd></div><div data-rise><dt><span aria-hidden="true" data-count="28" data-suffix="">28</span><span class="vh">28</span></dt><dd>pieces in APARN’s JAR channel<span>November 2026</span></dd></div></dl>
+  <p class="hmore" data-rise><a class="btn btn--soft btn--lg" href="network/">Explore the network <svg class="ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+</div></section>
+<section class="hsec hsec--why" id="why" aria-labelledby="h-why"><div class="wrap hwhy">
+  <div class="hwhy-a"><h2 class="hh2" id="h-why" data-rise>Why join APARN</h2><p class="hlead" data-rise>Connect with fellow artistic researchers, share your work and hear about upcoming opportunities through our Google Group.</p><div data-rise><a class="btn btn--join btn--lg" href="https://groups.google.com/g/ap-arn" rel="noopener" target="_blank" data-join>Join APARN<span class="vh"> (opens Google Groups in a new tab)</span></a></div></div>
+  <ul class="hwhy-list"><li data-rise><h3>Find your people across the region</h3><p>Meet artists and researchers who share your questions.</p></li><li data-rise><h3>Present at the annual conference</h3><p>A different host welcomes the network every year.</p></li><li data-rise><h3>Join the international conversation</h3><p>APARN is part of the Society for Artistic Research.</p></li><li data-rise><h3>Publish your research</h3><p>Share your work in APARN’s channel of the Journal for Artistic Research.</p></li><li data-rise><h3>Hear about opportunities</h3><p>Calls, news and invitations come to you through the group.</p></li></ul>
+</div></section>
+<section class="hsec" id="take-part" aria-labelledby="h-part"><div class="wrap">
+  <h2 class="hh2" id="h-part" data-rise>Share what you are working on.</h2>
+  <ul class="hways"><li data-rise><a href="programme/conference/"><h3>APARN Conference</h3><p>Every year, hosted somewhere new in the region.</p><p class="hways-next">APARN2027 · RMIT University Vietnam <span class="status status--tbc">Details to be confirmed</span></p><span class="hways-go" aria-hidden="true"><svg class="ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li data-rise><a href="programme/gathering-at-sar/"><h3>Gathering at the SAR Conference</h3><p>Share a 5–10-minute update with members.</p><p class="hways-next">SAR 2027 · Bratislava <span class="status status--tbc">Details to be confirmed</span></p><span class="hways-go" aria-hidden="true"><svg class="ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li data-rise><a href="publication/"><h3>Annual Publication</h3><p>Your contribution, collected at the end of the year.</p><p class="hways-next">A proposal for review <span class="status status--proposed">Proposed</span></p><span class="hways-go" aria-hidden="true"><svg class="ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li></ul>
+  <div class="hflow" data-rise>
+    <ol><li><span>1</span>Prepare one contribution</li><li><span>2</span>Share it in 5–10 minutes at SAR</li><li><span>3</span>Add it to the year-end collection, if you choose</li></ol>
+    <div class="hflow-act"><a class="btn btn--template btn--lg" href="template/" data-template-link>Template for Annual Publication</a><p>Prepare one research update for your SAR presentation and, if you choose, APARN’s year-end publication.</p></div>
   </div>
-</section>
-
-<section class="sec sec--activity" aria-labelledby="h-activity">
-  
-  <h2 id="h-activity" class="h2">See what artistic research is making possible.</h2>
-  <div class="activity">
-    <article class="feature" data-reveal>
-      <div class="plate" aria-hidden="true">
-  <span class="plate-label">APARN</span>
-  <span class="plate-year">2026</span>
-  <svg class="isles" viewBox="0 0 240 40" aria-hidden="true" focusable="false"><line x1="0" y1="28.799999999999997" x2="240" y2="28.799999999999997"/><path d="M12.9 28.799999999999997 Q 23.6 8.1 28.3 28.799999999999997 Z"/><path d="M61.7 28.799999999999997 Q 80.5 4.0 92.4 28.799999999999997 Z"/><path d="M123.4 28.799999999999997 Q 130.3 17.8 137.7 28.799999999999997 Z"/><path d="M160.8 28.799999999999997 Q 167.3 3.2 175.5 28.799999999999997 Z"/><path d="M187.4 28.799999999999997 Q 193.7 0.4 206.2 28.799999999999997 Z"/></svg>
-  <span class="plate-theme">Voice and authorship</span>
-  <span class="plate-place">Singapore</span>
-</div>
-      <div class="feature-body"><p class="feature-k"><span class="status status--held">Held</span> 27–29 July 2026 · Singapore</p>
-      <h3><a href="archive/aparn2026/">Who Speaks? Authorship, Authority, and Authenticity</a></h3>
-      <p>APARN joined NAFA’s practice-research exchange to ask who speaks through an artwork: questions of voice, authorship and authenticity in collaborative, embodied, traditional and AI-assisted practice.</p></div>
-    </article>
-    <article class="feature feature--quiet" data-reveal>
-      <h3 class="feature-h">New in the JAR channel</h3>
-      <p>Contributions from Singapore are already published in APARN’s channel of the Journal for Artistic Research.</p>
-      <ul class="mini-list"><li><a href="https://www.jar-online.net/node/2439" rel="noopener" target="_blank"><span class="mini-title">Who Speaks the Punjabi Psalm Authorship Erasure and Music Authority in the Punjabi Zaboor</span><span class="mini-by">Brian Bassanio Paul</span></a></li><li><a href="https://www.jar-online.net/node/2440" rel="noopener" target="_blank"><span class="mini-title">Beyond the Singular Voice: Mask Performance and Embodied Authorship in Artistic Research</span><span class="mini-by">Inessa Kalabekova, Dr Tetriana Ahmed Fauzi</span></a></li><li><a href="https://www.jar-online.net/node/2441" rel="noopener" target="_blank"><span class="mini-title">Pocket as Authored Space: Distributed Authority in Embodied Ensemble Practice</span><span class="mini-by">Eugene Seow</span></a></li><li><a href="https://www.jar-online.net/node/2442" rel="noopener" target="_blank"><span class="mini-title">I Surrender to You and Loving It. (A study in co-authoring)</span><span class="mini-by">Michael Hansen</span></a></li></ul>
-      <a class="arrow" href="network/#research">Browse all 28 pieces</a>
-    </article>
-  </div>
-  <div class="stories">
-    <details class="story" data-reveal><summary><span class="story-k">Book</span><span class="story-h">From a 2020 conversation to a book</span><span class="story-t">Rebordering the Archipelago</span></summary>
-      <div class="story-body"><p>Panels, artist presentations and essays from APARN2020, edited by convenors Danny Butt and Kurniawan Adi Saputro, in English and Bahasa Indonesia. Published by Perimeter Editions and launched at SAR’s 2025 conference in Porto.</p><p><a class="" href="https://www.perimeterbooks.com/products/rebordering-the-archipelago-asia-pacific-exchanges" rel="noopener" target="_blank">Find out more<span class="ext-mark" aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a></p><p class="source">Sources: <a href="https://www.researchcatalogue.net/announcements/4152674" rel="noopener" target="_blank">APARN newsletter, January 2026 (SAR announcement service)</a>; <a href="https://www.jar-online.net/en/channels/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network channel (JAR)</a></p></div></details><details class="story" data-reveal><summary><span class="story-k">Residency</span><span class="story-h">Five weeks in Oslo on climate and coloniality</span><span class="story-t">Climate/Coloniality</span></summary>
-      <div class="story-body"><p>A thematic residency with PRAKSIS Oslo. Ten residents, chosen from over 130 applications, spent five weeks in fieldwork and dialogue in August and September 2025. A publication is forthcoming.</p><p><a class="" href="https://www.praksisoslo.org/residencieslist/2025/r30-climate-coloniality" rel="noopener" target="_blank">Find out more<span class="ext-mark" aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a></p><p class="source">Source: <a href="https://www.researchcatalogue.net/announcements/4152674" rel="noopener" target="_blank">APARN newsletter, January 2026 (SAR announcement service)</a></p></div></details><details class="story" data-reveal><summary><span class="story-k">Exhibition</span><span class="story-h">Making do with technology, in Singapore</span><span class="story-t">Chapalang</span></summary>
-      <div class="story-body"><p>A touring exhibition curated by Gunalan Nadarajan and Roopesh Sitharan, on vernacular, “making do” approaches to technology in Southeast Asia. Artspace @ Helutrans, Singapore, 22 January to 1 February 2026.</p><p class="source">Source: <a href="https://www.researchcatalogue.net/announcements/4152674" rel="noopener" target="_blank">APARN newsletter, January 2026 (SAR announcement service)</a></p></div></details>
-  </div>
-</section>
-
-<section class="sec sec--network" aria-labelledby="h-network">
-  
-  <h2 id="h-network" class="h2">Meet the people. See where the work happens.</h2>
-  <dl class="evidence"><div class="ev ev--membership" data-reveal><dt class="ev-v">300+</dt><dd><span class="ev-l">members in the APARN Google Group</span><span class="ev-d">November 2026</span><span class="ev-n">The JAR channel says “more than 300 members”. The 300th member was announced in January 2026.</span></dd></div><div class="ev ev--conference" data-reveal><dt class="ev-v">150+</dt><dd><span class="ev-l">presentations at APARN2025 in Bangkok</span><span class="ev-d">July 2025</span><span class="ev-n">Counted at one conference, not across the membership.</span></dd></div><div class="ev ev--conference" data-reveal><dt class="ev-v">22</dt><dd><span class="ev-l">countries represented at APARN2025</span><span class="ev-d">July 2025</span><span class="ev-n">Where the APARN2025 presenters came from. This is not a count of member countries.</span></dd></div><div class="ev ev--events" data-reveal><dt class="ev-v">8</dt><dd><span class="ev-l">annual meetings held since 2019</span><span class="ev-d">2019–2026</span><span class="ev-n">In Indonesia, Malaysia, Thailand and Singapore, plus three online editions hosted from Melbourne and Yogyakarta.</span></dd></div><div class="ev ev--publication" data-reveal><dt class="ev-v">28</dt><dd><span class="ev-l">pieces in APARN’s JAR channel</span><span class="ev-d">November 2026</span><span class="ev-n">24 contributions from APARN events and 4 JAR publications from the region.</span></dd></div></dl>
-  <p class="reach-note">These places come from documented meetings, convenor institutions and projects. They show where APARN has met and worked, not where its members live. Member locations are private to the Google Group; approved figures can be added later.</p>
-  <div class="travel" aria-labelledby="h-travel">
-    <h3 id="h-travel" class="h3">The conference travels</h3>
-    <ol class="travel-line"><li class="travel-stop travel-stop--held"><a href="archive/aparn2019/"><span class="travel-year">2019</span><span class="travel-place">Yogyakarta</span></a></li><li class="travel-stop travel-stop--held"><a href="archive/aparn2020/"><span class="travel-year">2020</span><span class="travel-place">Online</span></a></li><li class="travel-stop travel-stop--held"><a href="archive/aparn2021/"><span class="travel-year">2021</span><span class="travel-place">Online</span></a></li><li class="travel-stop travel-stop--held"><a href="archive/aparn2022/"><span class="travel-year">2022</span><span class="travel-place">Online</span></a></li><li class="travel-stop travel-stop--held"><a href="archive/aparn2023/"><span class="travel-year">2023</span><span class="travel-place">Yogyakarta</span></a></li><li class="travel-stop travel-stop--held"><a href="archive/aparn2024/"><span class="travel-year">2024</span><span class="travel-place">Cyberjaya</span></a></li><li class="travel-stop travel-stop--held"><a href="archive/aparn2025/"><span class="travel-year">2025</span><span class="travel-place">Bangkok</span></a></li><li class="travel-stop travel-stop--held"><a href="archive/aparn2026/"><span class="travel-year">2026</span><span class="travel-place">Singapore</span></a></li><li class="travel-stop travel-stop--tbc"><a href="archive/aparn2027/"><span class="travel-year">2027</span><span class="travel-place">Vietnam</span></a></li></ol>
-  </div>
-  <div class="people-strip">
-    <h3 class="h3">Director and convenors</h3>
-    <ul class="people-list"><li><a href="about/#roopesh-sitharan"><span class="people-name">Roopesh Sitharan</span><span class="people-role">Director of APARN (from 2026)</span><span class="people-inst">Faculty of Creative Multimedia, Multimedia University (MMU), Cyberjaya</span></a></li><li><a href="about/#kurniawan-adi-saputro"><span class="people-name">Kurniawan Adi Saputro</span><span class="people-role">Network convenor</span><span class="people-inst">Indonesian Institute of the Arts Yogyakarta (ISI Yogyakarta)</span></a></li><li><a href="about/#danny-butt"><span class="people-name">Danny Butt</span><span class="people-role">Network convenor</span><span class="people-inst">Victorian College of the Arts, University of Melbourne</span></a></li><li><a href="about/#pornrat-damrhung"><span class="people-name">Pornrat Damrhung</span><span class="people-role">Network convenor</span><span class="people-inst">Department of Dramatic Arts, Chulalongkorn University, Bangkok</span></a></li><li><a href="about/#gunalan-nadarajan"><span class="people-name">Gunalan Nadarajan</span><span class="people-role">Network convenor</span><span class="people-inst">Penny W. Stamps School of Art and Design, University of Michigan</span></a></li></ul>
-  </div>
-  <div class="why" aria-labelledby="h-why">
-    <h3 id="h-why" class="h3">Why join APARN</h3>
-    <ol class="benefits"><li class="benefit" data-reveal>
-    <h3>Find your people across the region</h3>
-    <p>Meet artists and researchers who share your questions, from Yogyakarta to Melbourne, Bangkok to Ann Arbor. More than 300 people already belong to the group.</p><p class="benefit-proof">More than 300 Google Group members (JAR channel, November 2026)</p></li><li class="benefit" data-reveal>
-    <h3>Present at the annual conference</h3>
-    <p>Each year a different host opens its doors. The meetings welcome papers, performances, workshops, video essays and creative formats.</p><p class="benefit-proof">APARN2025: over 150 presentations from 22 countries (newsletter, January 2026)</p></li><li class="benefit" data-reveal>
-    <h3>Join the international conversation</h3>
-    <p>APARN is part of the Society for Artistic Research, and every year it gathers during the SAR Conference, online, so members who cannot travel can still join in.</p><p class="benefit-proof">A Special Interest Group of SAR, with a yearly gathering at the SAR Conference (SAR, 2026)</p></li><li class="benefit" data-reveal>
-    <h3>Publish your research</h3>
-    <p>Presenters at APARN events can publish in APARN’s channel of the Journal for Artistic Research, and rework papers for JAR’s peer-reviewed calls.</p><p class="benefit-proof">28 pieces in the APARN channel in JAR (November 2026)</p></li><li class="benefit" data-reveal>
-    <h3>Hear about opportunities</h3>
-    <p>Calls for papers, hosting invitations and news reach members through the group, and you can share your own projects there too.</p><p class="benefit-proof">The call to host APARN2027 was to be announced through the group (newsletter, January 2026)</p></li></ol>
-  </div>
-  <section class="join-block" aria-labelledby="join-31">
-  <h2 id="join-31" class="join-h">Become part of the conversation</h2>
-  <p class="join-lead">Connect with fellow artistic researchers, share your work and hear about upcoming opportunities through our Google Group.</p>
-  <div class="join-actions"><a class="btn btn--join btn--large" href="https://groups.google.com/g/ap-arn" rel="noopener" target="_blank" data-join>Join APARN<span class="vh"> (opens Google Groups in a new tab)</span></a><p class="join-where">Opens Google Groups. You join there. Everyone in or from the Asia Pacific with an interest in artistic research is welcome.</p></div>
-</section>
-</section>
-
-<section class="sec sec--part" aria-labelledby="h-part">
-  
-  <h2 id="h-part" class="h2">Share what you are working on.</h2>
-  <ol class="ways">
-  <li class="way" data-reveal><p class="way-k">Every year, in the region</p><h3>APARN Conference</h3>
-    <p>A gathering hosted by a different institution each year, with papers, performances, workshops and conversation.</p>
-    <p class="way-next"><span>Next</span> APARN2027, RMIT University Vietnam <span class="status status--tbc">Details to be confirmed</span></p>
-    <a class="arrow" href="programme/conference/">The conference</a></li>
-  <li class="way" data-reveal><p class="way-k">Every year, at SAR</p><h3>APARN Gathering at the SAR Conference</h3>
-    <p>Share where your research is now in a short update of 5–10 minutes, with members joining from across the network.</p>
-    <p class="way-next"><span>Next</span> SAR 2027, Bratislava, 21–23 April 2027 <span class="status status--tbc">Details to be confirmed</span></p>
-    <a class="arrow" href="programme/gathering-at-sar/">The gathering</a></li>
-  <li class="way" data-reveal><p class="way-k">At the end of each year</p><h3>APARN Annual Publication</h3>
-    <p>A year-end collection of members’ research in progress, made from the same contribution you present.</p>
-    <p class="way-next"><span>Status</span> <span class="status status--proposed">Proposed</span></p>
-    <a class="arrow" href="publication/">The publication</a></li>
-</ol>
-  <div class="flow">
-  <p class="flow-lead">One contribution. A short presentation. A place in the annual collection, if you choose.</p>
-  <ol class="flow-steps">
-    <li><span class="flow-n">1</span><strong>Prepare one contribution</strong><span>About two pages from the shared template.</span></li>
-    <li><span class="flow-n">2</span><strong>Share a 5–10-minute update at SAR</strong><span>Present the same contribution at the APARN Gathering.</span></li>
-    <li><span class="flow-n">3</span><strong>Opt in to the year-end collection</strong><span>If you choose, the same contribution is prepared for the book.</span></li>
-  </ol>
-  <div class="flow-actions"><a class="btn btn--template btn--large" href="template/" data-template-link>Template for Annual Publication</a><p class="flow-dual">Prepare one research update for your SAR presentation and, if you choose, APARN’s year-end publication.</p>
-  <a class="arrow" href="contribute/">Try the submission demo</a></div>
-</div>
-</section>
-
-<section class="closing" aria-labelledby="h-closing">
-  <svg class="closing-isles" viewBox="0 0 480 60" aria-hidden="true" focusable="false"><line x1="0" y1="43.199999999999996" x2="480" y2="43.199999999999996"/><path d="M6.2 43.199999999999996 Q 19.0 11.3 28.5 43.199999999999996 Z"/><path d="M60.3 43.199999999999996 Q 69.2 22.8 87.9 43.199999999999996 Z"/><path d="M120.0 43.199999999999996 Q 134.3 22.8 142.2 43.199999999999996 Z"/><path d="M158.5 43.199999999999996 Q 163.1 22.5 166.5 43.199999999999996 Z"/><path d="M184.2 43.199999999999996 Q 195.0 30.8 205.9 43.199999999999996 Z"/><path d="M218.8 43.199999999999996 Q 224.6 0.2 227.1 43.199999999999996 Z"/><path d="M238.1 43.199999999999996 Q 242.2 20.4 246.3 43.199999999999996 Z"/><path d="M258.8 43.199999999999996 Q 268.5 29.2 272.9 43.199999999999996 Z"/><path d="M306.7 43.199999999999996 Q 311.7 37.5 318.2 43.199999999999996 Z"/><path d="M334.2 43.199999999999996 Q 340.6 1.2 346.6 43.199999999999996 Z"/><path d="M373.5 43.199999999999996 Q 380.7 1.2 395.9 43.199999999999996 Z"/><path d="M419.4 43.199999999999996 Q 425.6 24.4 434.1 43.199999999999996 Z"/></svg>
-  <h2 id="h-closing" class="closing-h">Join the conversation.</h2>
-  <p>Connect with fellow artistic researchers, share your work and hear about upcoming opportunities through our Google Group.</p>
-  <a class="btn btn--join btn--large" href="https://groups.google.com/g/ap-arn" rel="noopener" target="_blank" data-join>Join APARN<span class="vh"> (opens Google Groups in a new tab)</span></a>
-  <p class="join-where">Opens Google Groups. You join there.</p>
-</section>
+</div></section>
+<section class="hclose" id="join" aria-labelledby="h-join"><div class="wrap" data-rise>
+  <h2 class="hclose-h" id="h-join">Join the conversation</h2><a class="btn btn--join btn--lg" href="https://groups.google.com/g/ap-arn" rel="noopener" target="_blank" data-join>Join APARN<span class="vh"> (opens Google Groups in a new tab)</span></a>
+</div></section>
 </main>
 <footer class="colophon">
   <div class="colophon-inner">
@@ -186,12 +88,15 @@
       <h2 class="colophon-h">About this prototype</h2>
       <p class="colophon-small">A redesign proposal for discussion. Content checked 24 November 2026. Proposals are marked as such.</p>
       <ul class="colophon-list">
+        <li><a href="compare/">Compare all three concepts</a></li>
         <li><a href="sources/">Sources, credits and open questions</a></li>
         <li><a href="https://teohsingjian02.github.io/aparn-prototypeB/">See Concept B: Living Network</a></li>
         <li><a href="https://teohsingjian02.github.io/aparn-prototypeC/">See Concept C: Clear Signal</a></li>
       </ul>
+      <button type="button" class="motion-sw" data-motion-toggle aria-pressed="false" hidden><span>Animations</span><span class="motion-sw-k" aria-hidden="true"></span></button>
     </div>
   </div>
 </footer>
+<a class="totop" href="#main" data-totop><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 16V4M5 9l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="vh">Back to top</span></a>
 </body>
 </html>

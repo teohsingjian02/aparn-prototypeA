@@ -10,13 +10,13 @@
 <link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
 <link rel="preload" href="../assets/fonts/newsreader-normal-latin-3.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/a.css">
-<script>document.documentElement.classList.add("js")</script>
+<script>(function () { var r = document.documentElement, m = null; r.classList.add("js"); try { m = localStorage.getItem("aparn-motion"); } catch (e) {} var q = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; if (m === "on" || (m !== "off" && !q)) r.classList.add("anim"); if (m === "off") r.classList.add("motion-off"); })();</script>
 <script defer src="../assets/js/aparn.js"></script>
+<script defer src="../assets/js/motion.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="proto">Prototype for discussion: a redesign proposal, not the official APARN website. <span class="proto-concept">Concept A: Editorial Gallery.</span> <a href="../compare/">Compare all three concepts</a></div>
-<header class="masthead">
+<header class="masthead" data-top>
   <div class="masthead-inner">
     <a class="wordmark" href="../"><svg class="wordmark-isles" viewBox="0 0 64 22" aria-hidden="true" focusable="false"><line x1="0" y1="15.84" x2="64" y2="15.84"/><path d="M6.2 15.84 Q 12.6 2.4 27.2 15.84 Z"/></svg><span class="wordmark-short">APARN</span><span class="wordmark-full">Asia Pacific Artistic Research Network</span></a>
     <nav class="site-nav" aria-label="Main">
@@ -28,12 +28,12 @@
     </nav>
     <a class="btn btn--join masthead-join" href="https://groups.google.com/g/ap-arn" rel="noopener" target="_blank" data-join>Join APARN<span class="vh"> (opens Google Groups in a new tab)</span></a>
   </div>
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
 </header>
 <main id="main" tabindex="-1">
 
 <header class="page-head">
-  <p class="kicker">About</p>
-  <h1 class="h1">About APARN</h1>
+  <h1 class="h1"><span class="w"><span class="wi" style="--d:0">About</span></span> <span class="w"><span class="wi" style="--d:1">APARN</span></span></h1>
   <p class="lead">APARN is a network for artists, researchers, educators, curators and practitioners who work through art to make knowledge. It brings together people working in, from and with the Asia Pacific, whether they are based in a university, a collective or an independent practice.</p>
 </header>
 <section class="sec" aria-labelledby="h-sar">
@@ -56,48 +56,48 @@
 </section>
 <section class="sec" aria-labelledby="h-history">
   <h2 id="h-history" class="h2">How APARN began</h2>
-  <ol class="history"><li data-reveal><span class="history-d">2019</span><p>APARN starts as a partnership between the Centre of Visual Art at the University of Melbourne and the Indonesian Institute of the Arts Yogyakarta (ISI Yogyakarta).</p></li><li data-reveal><span class="history-d">October 2019</span><p>The first meeting is held in Yogyakarta with the International Conference on Asia Pacific Arts Studies.</p></li><li data-reveal><span class="history-d">2020–2022</span><p>Annual meetings continue online: Rebordering the Archipelago (2020), a graduate research meet-up (2021) and #APARN2022.</p></li><li data-reveal><span class="history-d">2022–2023</span><p>APARN becomes a Special Interest Group of the Society for Artistic Research. Its inaugural SIG meeting closes #APARN2022, and aparn.net dates the SIG to 2023.</p></li><li data-reveal><span class="history-d">2023–2026</span><p>The annual meeting travels: Yogyakarta, Cyberjaya, Bangkok and Singapore. APARN2025 is the largest so far, with over 150 presentations from 22 countries.</p></li><li data-reveal><span class="history-d">2026</span><p>Dr Roopesh Sitharan (Multimedia University) becomes Director of APARN.</p></li></ol>
+  <ol class="history"><li data-rise><span class="history-d">2019</span><p>APARN starts as a partnership between the Centre of Visual Art at the University of Melbourne and the Indonesian Institute of the Arts Yogyakarta (ISI Yogyakarta).</p></li><li data-rise><span class="history-d">October 2019</span><p>The first meeting is held in Yogyakarta with the International Conference on Asia Pacific Arts Studies.</p></li><li data-rise><span class="history-d">2020–2022</span><p>Annual meetings continue online: Rebordering the Archipelago (2020), a graduate research meet-up (2021) and #APARN2022.</p></li><li data-rise><span class="history-d">2022–2023</span><p>APARN becomes a Special Interest Group of the Society for Artistic Research. Its inaugural SIG meeting closes #APARN2022, and aparn.net dates the SIG to 2023.</p></li><li data-rise><span class="history-d">2023–2026</span><p>The annual meeting travels: Yogyakarta, Cyberjaya, Bangkok and Singapore. APARN2025 is the largest so far, with over 150 presentations from 22 countries.</p></li><li data-rise><span class="history-d">2026</span><p>Dr Roopesh Sitharan (Multimedia University) becomes Director of APARN.</p></li></ol>
   <p class="small">The first meeting, in October 2019, brought together Kurniawan Adi Saputro, Danny Butt, Alison Carroll, Pornrat Damrhung, Léuli Eshrāghi, Michael Hornblow, Khalid Midam and Helly Minarti, with a keynote by Gunalan Nadarajan.</p>
-  <p class="source">Sources: <a href="https://aparn.net/about-aparn/" rel="noopener" target="_blank">About APARN</a>; <a href="https://societyforartisticresearch.org/sigs/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network (SAR Special Interest Groups)</a>; <a href="https://www.jar-online.net/en/channels/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network channel (JAR)</a>; <a href="https://aparn.net/aparn2022-artistic-research-for-the-planet/" rel="noopener" target="_blank">#APARN2022</a>; <a href="https://aparn.net/wp-content/uploads/2023/06/ProgrammeAPARN2023.pdf" rel="noopener" target="_blank">APARN2023 programme booklet (PDF)</a>; <a href="https://www.researchcatalogue.net/announcements/4152674" rel="noopener" target="_blank">APARN newsletter, January 2026 (SAR announcement service)</a>; Information from the APARN project team</p>
+  
 </section>
 <section class="sec" aria-labelledby="h-people">
   <h2 id="h-people" class="h2">Director and convenors</h2>
   <p class="lead-s">The convenors look after the network. Each annual conference also has its own organising team, listed in the <a href="../archive/">archive</a>.</p>
-  <div class="people-cat"><article class="person" id="roopesh-sitharan" data-reveal>
+  <div class="people-cat"><article class="person" id="roopesh-sitharan" data-rise>
     <p class="person-n">01</p>
     <div><h3 class="person-name">Dr Roopesh Sitharan</h3>
     <p class="person-roles">Director of APARN (from 2026) · Network convenor</p>
     <p class="person-inst">Faculty of Creative Multimedia, Multimedia University (MMU), Cyberjaya, Malaysia</p>
     <p>A multidisciplinary practitioner, educator, curator, researcher and artist. His projects have appeared at the Gwangju Biennale, ISEA and SIGGRAPH, and his writing in Leonardo Electronic Almanac, CTRL+P and Documenta 12.</p>
-    <details class="person-more"><summary>Work with APARN</summary><ul><li>Convenor of APARN2024, hosted at MMU</li><li>Convenor of APARN2025</li><li>Co-curator of Chapalang (Singapore, 2026)</li><li>The person to contact about proposals for APARN’s JAR channel</li></ul><p class="source">Sources: Information from the APARN project team; <a href="https://www.jar-online.net/en/channels/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network channel (JAR)</a>; <a href="https://societyforartisticresearch.org/sigs/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network (SAR Special Interest Groups)</a>; <a href="https://aparn.net/about-aparn/" rel="noopener" target="_blank">About APARN</a>; <a href="https://aparn.net/2024-2/" rel="noopener" target="_blank">#APARN 2024 (Art as Research: Methods for Synthetic Reasoning)</a>; <a href="https://aparn.net/aparn2025/" rel="noopener" target="_blank">#APARN2025 (Artistic Research for Creative Communities)</a>; <a href="https://www.researchcatalogue.net/announcements/4152674" rel="noopener" target="_blank">APARN newsletter, January 2026 (SAR announcement service)</a></p></details>
-    <p class="person-mail"><a href="mailto:rs@mmu.edu.my">rs@mmu.edu.my</a></p></div></article><article class="person" id="kurniawan-adi-saputro" data-reveal>
+    <details class="person-more"><summary>Work with APARN</summary><ul><li>Convenor of APARN2024, hosted at MMU</li><li>Convenor of APARN2025</li><li>Co-curator of Chapalang (Singapore, 2026)</li><li>The person to contact about proposals for APARN’s JAR channel</li></ul></details>
+    <p class="person-mail"><a href="mailto:rs@mmu.edu.my">rs@mmu.edu.my</a></p></div></article><article class="person" id="kurniawan-adi-saputro" data-rise>
     <p class="person-n">02</p>
     <div><h3 class="person-name">Dr Kurniawan Adi Saputro</h3>
     <p class="person-roles">Network convenor</p>
     <p class="person-inst">Indonesian Institute of the Arts Yogyakarta (ISI Yogyakarta), Indonesia</p>
     <p>Lecturer in the Department of Photography at ISI Yogyakarta, teaching research methods in arts and visual communication. His recent research looks at photographs in climate education, community-based festivals and climate justice. In late 2024 he built Wana Nagara, a studio around a tiny urban forest for researching culture in a time of climate crisis.</p>
-    <details class="person-more"><summary>Work with APARN</summary><ul><li>Co-led the network in its first years, with Danny Butt</li><li>Convenor of APARN2023, hosted at ISI Yogyakarta</li><li>Convenor of the 2020–2025 meetings</li><li>Co-editor of Rebordering the Archipelago</li><li>Co-editor of APARN’s JAR channel</li><li>Co-developed the Climate/Coloniality residency with PRAKSIS Oslo (2025)</li></ul><p class="source">Sources: <a href="https://aparn.net/about-aparn/" rel="noopener" target="_blank">About APARN</a>; <a href="https://societyforartisticresearch.org/sigs/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network (SAR Special Interest Groups)</a>; <a href="https://aparn.net/aparn2020/" rel="noopener" target="_blank">#APARN2020 (Rebordering the Archipelago)</a>; <a href="https://aparn.net/aparn2023/" rel="noopener" target="_blank">#APARN2023 “The Matter of Art”</a>; <a href="https://www.jar-online.net/en/channels/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network channel (JAR)</a>; <a href="https://www.researchcatalogue.net/announcements/4152674" rel="noopener" target="_blank">APARN newsletter, January 2026 (SAR announcement service)</a></p></details>
-    <p class="person-mail"><a href="mailto:kurniawan.as@isi.ac.id">kurniawan.as@isi.ac.id</a></p></div></article><article class="person" id="danny-butt" data-reveal>
+    <details class="person-more"><summary>Work with APARN</summary><ul><li>Co-led the network in its first years, with Danny Butt</li><li>Convenor of APARN2023, hosted at ISI Yogyakarta</li><li>Convenor of the 2020–2025 meetings</li><li>Co-editor of Rebordering the Archipelago</li><li>Co-editor of APARN’s JAR channel</li><li>Co-developed the Climate/Coloniality residency with PRAKSIS Oslo (2025)</li></ul></details>
+    <p class="person-mail"><a href="mailto:kurniawan.as@isi.ac.id">kurniawan.as@isi.ac.id</a></p></div></article><article class="person" id="danny-butt" data-rise>
     <p class="person-n">03</p>
     <div><h3 class="person-name">Dr Danny Butt</h3>
     <p class="person-roles">Network convenor</p>
     <p class="person-inst">Victorian College of the Arts, University of Melbourne, Australia</p>
     <p>Coordinator of Research for Design and Production at the Victorian College of the Arts, University of Melbourne. He wrote Artistic Research in the Future Academy (Intellect / University of Chicago Press, 2017) and sits on the Editorial Board of the Journal for Artistic Research.</p>
-    <details class="person-more"><summary>Work with APARN</summary><ul><li>Co-led the network in its first years, with Kurniawan Adi Saputro</li><li>Convenor of the 2020–2025 meetings</li><li>Co-editor of Rebordering the Archipelago</li><li>Co-editor of APARN’s JAR channel</li><li>Co-developed the Climate/Coloniality residency with PRAKSIS Oslo (2025)</li></ul><p class="source">Sources: <a href="https://aparn.net/about-aparn/" rel="noopener" target="_blank">About APARN</a>; <a href="https://societyforartisticresearch.org/sigs/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network (SAR Special Interest Groups)</a>; <a href="https://aparn.net/aparn2020/" rel="noopener" target="_blank">#APARN2020 (Rebordering the Archipelago)</a>; <a href="https://aparn.net/aparn-2021/" rel="noopener" target="_blank">#APARN2021 (Graduate Research Meet-up)</a>; <a href="https://www.jar-online.net/en/channels/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network channel (JAR)</a>; <a href="https://www.researchcatalogue.net/announcements/4152674" rel="noopener" target="_blank">APARN newsletter, January 2026 (SAR announcement service)</a></p></details>
-    <p class="person-mail"><a href="mailto:butt@unimelb.edu.au">butt@unimelb.edu.au</a></p></div></article><article class="person" id="pornrat-damrhung" data-reveal>
+    <details class="person-more"><summary>Work with APARN</summary><ul><li>Co-led the network in its first years, with Kurniawan Adi Saputro</li><li>Convenor of the 2020–2025 meetings</li><li>Co-editor of Rebordering the Archipelago</li><li>Co-editor of APARN’s JAR channel</li><li>Co-developed the Climate/Coloniality residency with PRAKSIS Oslo (2025)</li></ul></details>
+    <p class="person-mail"><a href="mailto:butt@unimelb.edu.au">butt@unimelb.edu.au</a></p></div></article><article class="person" id="pornrat-damrhung" data-rise>
     <p class="person-n">04</p>
     <div><h3 class="person-name">Professor Pornrat Damrhung</h3>
     <p class="person-roles">Network convenor</p>
     <p class="person-inst">Department of Dramatic Arts, Chulalongkorn University, Bangkok, Thailand</p>
     <p>Professor of Dramatic Arts at Chulalongkorn University and Associate Member of the Royal Society of Thailand. She specialises in contemporary dance cultures, community performance and young people’s theatre.</p>
-    <details class="person-more"><summary>Work with APARN</summary><ul><li>Took part in the first meeting (2019)</li><li>Presented at #APARN2022 with Lowell Skar</li><li>Convenor of APARN2025, hosted at Chulalongkorn University</li></ul><p class="source">Sources: <a href="https://aparn.net/about-aparn/" rel="noopener" target="_blank">About APARN</a>; <a href="https://societyforartisticresearch.org/sigs/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network (SAR Special Interest Groups)</a>; <a href="https://aparn.net/wp-content/uploads/2023/06/ProgrammeAPARN2023.pdf" rel="noopener" target="_blank">APARN2023 programme booklet (PDF)</a>; <a href="https://aparn.net/aparn2022-artistic-research-for-the-planet/" rel="noopener" target="_blank">#APARN2022</a>; <a href="https://aparn.net/aparn2025/" rel="noopener" target="_blank">#APARN2025 (Artistic Research for Creative Communities)</a></p></details>
-    <p class="person-mail"><a href="mailto:Pornrat.D@chula.ac.th">Pornrat.D@chula.ac.th</a></p></div></article><article class="person" id="gunalan-nadarajan" data-reveal>
+    <details class="person-more"><summary>Work with APARN</summary><ul><li>Took part in the first meeting (2019)</li><li>Presented at #APARN2022 with Lowell Skar</li><li>Convenor of APARN2025, hosted at Chulalongkorn University</li></ul></details>
+    <p class="person-mail"><a href="mailto:Pornrat.D@chula.ac.th">Pornrat.D@chula.ac.th</a></p></div></article><article class="person" id="gunalan-nadarajan" data-rise>
     <p class="person-n">05</p>
     <div><h3 class="person-name">Professor Gunalan Nadarajan</h3>
     <p class="person-roles">Network convenor</p>
     <p class="person-inst">Penny W. Stamps School of Art and Design, University of Michigan, United States</p>
     <p>An art theorist and curator working where art, science and technology meet. His publications have been translated into 16 languages. His curatorial work includes Documenta XI (Kassel, 2002) and ISEA2008 in Singapore.</p>
-    <details class="person-more"><summary>Work with APARN</summary><ul><li>Keynote at the first meeting (2019)</li><li>Opened APARN2020, as Dean of the Stamps School</li><li>Convenor of the 2022–2025 meetings</li><li>Co-editor of APARN’s JAR channel</li><li>Co-curator of Chapalang (Singapore, 2026)</li></ul><p class="source">Sources: <a href="https://aparn.net/about-aparn/" rel="noopener" target="_blank">About APARN</a>; <a href="https://societyforartisticresearch.org/sigs/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network (SAR Special Interest Groups)</a>; <a href="https://aparn.net/wp-content/uploads/2023/06/ProgrammeAPARN2023.pdf" rel="noopener" target="_blank">APARN2023 programme booklet (PDF)</a>; <a href="https://aparn.net/aparn2020/" rel="noopener" target="_blank">#APARN2020 (Rebordering the Archipelago)</a>; <a href="https://aparn.net/aparn2022-artistic-research-for-the-planet/" rel="noopener" target="_blank">#APARN2022</a>; <a href="https://www.jar-online.net/en/channels/asia-pacific-artistic-research-network" rel="noopener" target="_blank">Asia Pacific Artistic Research Network channel (JAR)</a>; <a href="https://www.researchcatalogue.net/announcements/4152674" rel="noopener" target="_blank">APARN newsletter, January 2026 (SAR announcement service)</a></p></details>
+    <details class="person-more"><summary>Work with APARN</summary><ul><li>Keynote at the first meeting (2019)</li><li>Opened APARN2020, as Dean of the Stamps School</li><li>Convenor of the 2022–2025 meetings</li><li>Co-editor of APARN’s JAR channel</li><li>Co-curator of Chapalang (Singapore, 2026)</li></ul></details>
     <p class="person-mail"><a href="mailto:guna@umich.edu">guna@umich.edu</a></p></div></article></div>
 </section>
 <section class="sec" id="contact" aria-labelledby="h-contact">
@@ -140,12 +140,15 @@
       <h2 class="colophon-h">About this prototype</h2>
       <p class="colophon-small">A redesign proposal for discussion. Content checked 24 November 2026. Proposals are marked as such.</p>
       <ul class="colophon-list">
+        <li><a href="../compare/">Compare all three concepts</a></li>
         <li><a href="../sources/">Sources, credits and open questions</a></li>
         <li><a href="https://teohsingjian02.github.io/aparn-prototypeB/">See Concept B: Living Network</a></li>
         <li><a href="https://teohsingjian02.github.io/aparn-prototypeC/">See Concept C: Clear Signal</a></li>
       </ul>
+      <button type="button" class="motion-sw" data-motion-toggle aria-pressed="false" hidden><span>Animations</span><span class="motion-sw-k" aria-hidden="true"></span></button>
     </div>
   </div>
 </footer>
+<a class="totop" href="#main" data-totop><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 16V4M5 9l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="vh">Back to top</span></a>
 </body>
 </html>

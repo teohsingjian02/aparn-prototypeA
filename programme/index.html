@@ -10,13 +10,13 @@
 <link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
 <link rel="preload" href="../assets/fonts/newsreader-normal-latin-3.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/a.css">
-<script>document.documentElement.classList.add("js")</script>
+<script>(function () { var r = document.documentElement, m = null; r.classList.add("js"); try { m = localStorage.getItem("aparn-motion"); } catch (e) {} var q = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; if (m === "on" || (m !== "off" && !q)) r.classList.add("anim"); if (m === "off") r.classList.add("motion-off"); })();</script>
 <script defer src="../assets/js/aparn.js"></script>
+<script defer src="../assets/js/motion.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="proto">Prototype for discussion: a redesign proposal, not the official APARN website. <span class="proto-concept">Concept A: Editorial Gallery.</span> <a href="../compare/">Compare all three concepts</a></div>
-<header class="masthead">
+<header class="masthead" data-top>
   <div class="masthead-inner">
     <a class="wordmark" href="../"><svg class="wordmark-isles" viewBox="0 0 64 22" aria-hidden="true" focusable="false"><line x1="0" y1="15.84" x2="64" y2="15.84"/><path d="M6.2 15.84 Q 12.6 2.4 27.2 15.84 Z"/></svg><span class="wordmark-short">APARN</span><span class="wordmark-full">Asia Pacific Artistic Research Network</span></a>
     <nav class="site-nav" aria-label="Main">
@@ -28,24 +28,24 @@
     </nav>
     <a class="btn btn--join masthead-join" href="https://groups.google.com/g/ap-arn" rel="noopener" target="_blank" data-join>Join APARN<span class="vh"> (opens Google Groups in a new tab)</span></a>
   </div>
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
 </header>
 <main id="main" tabindex="-1">
 
 <header class="page-head">
-  <p class="kicker">Programme</p>
-  <h1 class="h1">Three ways to take part</h1>
+  <h1 class="h1"><span class="w"><span class="wi" style="--d:0">Three</span></span> <span class="w"><span class="wi" style="--d:1">ways</span></span> <span class="w"><span class="wi" style="--d:2">to</span></span> <span class="w"><span class="wi" style="--d:3">take</span></span> <span class="w"><span class="wi" style="--d:4">part</span></span></h1>
   <p class="lead">Meet in the region each year, share your progress during the SAR Conference, and add your work to a year-end collection. One contribution can carry you through all three.</p>
 </header>
 <section class="sec" aria-labelledby="h-ways"><h2 id="h-ways" class="vh">The three ways</h2><ol class="ways">
-  <li class="way" data-reveal><p class="way-k">Every year, in the region</p><h3>APARN Conference</h3>
+  <li class="way" data-rise><h3>APARN Conference</h3>
     <p>A gathering hosted by a different institution each year, with papers, performances, workshops and conversation.</p>
     <p class="way-next"><span>Next</span> APARN2027, RMIT University Vietnam <span class="status status--tbc">Details to be confirmed</span></p>
     <a class="arrow" href="../programme/conference/">The conference</a></li>
-  <li class="way" data-reveal><p class="way-k">Every year, at SAR</p><h3>APARN Gathering at the SAR Conference</h3>
+  <li class="way" data-rise><h3>APARN Gathering at the SAR Conference</h3>
     <p>Share where your research is now in a short update of 5–10 minutes, with members joining from across the network.</p>
     <p class="way-next"><span>Next</span> SAR 2027, Bratislava, 21–23 April 2027 <span class="status status--tbc">Details to be confirmed</span></p>
     <a class="arrow" href="../programme/gathering-at-sar/">The gathering</a></li>
-  <li class="way" data-reveal><p class="way-k">At the end of each year</p><h3>APARN Annual Publication</h3>
+  <li class="way" data-rise><h3>APARN Annual Publication</h3>
     <p>A year-end collection of members’ research in progress, made from the same contribution you present.</p>
     <p class="way-next"><span>Status</span> <span class="status status--proposed">Proposed</span></p>
     <a class="arrow" href="../publication/">The publication</a></li>
@@ -101,12 +101,15 @@
       <h2 class="colophon-h">About this prototype</h2>
       <p class="colophon-small">A redesign proposal for discussion. Content checked 24 November 2026. Proposals are marked as such.</p>
       <ul class="colophon-list">
+        <li><a href="../compare/">Compare all three concepts</a></li>
         <li><a href="../sources/">Sources, credits and open questions</a></li>
         <li><a href="https://teohsingjian02.github.io/aparn-prototypeB/">See Concept B: Living Network</a></li>
         <li><a href="https://teohsingjian02.github.io/aparn-prototypeC/">See Concept C: Clear Signal</a></li>
       </ul>
+      <button type="button" class="motion-sw" data-motion-toggle aria-pressed="false" hidden><span>Animations</span><span class="motion-sw-k" aria-hidden="true"></span></button>
     </div>
   </div>
 </footer>
+<a class="totop" href="#main" data-totop><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 16V4M5 9l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="vh">Back to top</span></a>
 </body>
 </html>
